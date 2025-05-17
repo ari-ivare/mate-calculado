@@ -93,3 +93,20 @@ elMejorHechizo hechizos postre = foldl1 (mejorHechizo postre) hechizos
 
 listaPostresInf = repeat torta
 listaHechizosInf = repeat immobulus
+
+{-
+Magia Infinita
+
+3.B
+No, no existe una consulta que me sepa dar una respuesta.
+La funcion para saber si un hechizo deja listos a todos los postres de una mesa usa la función all.
+Esta depende de que absolutamente todos los valores de la lista cumplan con determinada condición por lo que no es posible una lazy evaluation que permita cortar antes la evaluación de la lista.
+
+3.C
+No, no existe una consulta que me sepa dar una respuesta.
+El mejor hechizo se calcula por medio de un foldl1 y se van comparando uno a uno los hechizos de toda la lista, por lo que debe evaluarse la lista en su totalidad para poder devolver un resultado.
+Si la condición para evaluar el mejor hechizo fuese distinta podría llegar a darse el caso.
+Por ejemplo si se considera como mejor hechizo "al primero en encontrarse que deje a un postre con 10 sabores".
+En ese caso podría cortase pronto la evaluación y obtener un resultado. Pero no es el caso.
+
+-}
