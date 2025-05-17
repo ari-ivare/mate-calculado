@@ -102,6 +102,10 @@ No, no existe una consulta que me sepa dar una respuesta.
 La funcion para saber si un hechizo deja listos a todos los postres de una mesa usa la función all.
 Esta depende de que absolutamente todos los valores de la lista cumplan con determinada condición por lo que no es posible una lazy evaluation que permita cortar antes la evaluación de la lista.
 
+Mal ☝️
+
+Si existe. Usar avadaKedavra como hechizo haría que ya haya un postre que no está listo y por lo tanto al ser una comparación de && entre todos ya con saber que el primero es false se devuelve false por lazy evaluation.
+
 3.C
 No, no existe una consulta que me sepa dar una respuesta.
 El mejor hechizo se calcula por medio de un foldl1 y se van comparando uno a uno los hechizos de toda la lista, por lo que debe evaluarse la lista en su totalidad para poder devolver un resultado.
